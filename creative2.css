@@ -1,0 +1,77 @@
+.container {
+    background-image: url('https://images.pexels.com/photos/17663/pexels-photo.jpg?w=940&h=650&auto=compress&cs=tinysrgb');
+    background-position-x: 100px;
+    background-size: cover;
+    background-position: center -200px;
+    width: 100vw;
+    height:100vh;
+    flex-direction:column;   
+    position: relative;
+   
+}
+
+.container2 {
+
+background-position-x: 100px;
+background-size: cover;
+background-position: center -200px;
+width: 100vw;
+height:100vh;
+flex-direction:column;   
+position: relative;
+background-color: rgba(255,255,255,.3);
+display:flex;
+align-items:center;
+justify-content: center;
+}
+    
+#enternumberpar{
+    text-align: center;
+    color:#2B2929;
+    font-size: 80px;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display:block;
+    margin-bottom: 15px;
+    margin-top: 0px;
+    font-weight: normal;
+
+}
+    
+#enterphone{
+    text-align: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 40px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+#namebox{
+text-align: center;
+height: 60px;
+width: 200px;
+border-radius: 12px;
+margin-bottom: 20px;
+font-size: 25px;
+
+}
+.centernumberbox{
+text-align: center;
+}
+
+.centerbutton{
+text-align: center;
+}
+    
+.buttonformat{
+background-color: #696868;
+border: none;
+color: white;
+padding: 15px 32px;
+border-radius: 12px;
+text-align: center;
+text-decoration: none;
+font-size: 16px;;
+position: relative;
+/* top: 60%; */
+margin-bottom: 70px;
+}
