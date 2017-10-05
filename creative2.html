@@ -45,7 +45,25 @@
 		}	
 		});
 		});
-  }); //end of document.ready
+	$("#giphButton").click(function(e){
+ 	 e.preventDefault();
+ 	 var myurl= "http://api.giphy.com/v1/gifs/search?q=celebration&api_key=epc9UvOUM3cdzaoent78NNtXpvWTsbqv&limit=15";
+	 console.log(myurl);
+ 	 $.ajax({
+   	 url : myurl,
+   	 crossDomain: true,
+   	 dataType : "json",
+   	 success : function(result) {
+     	 console.log(result);
+        var randNumber = Math.floor(Math.random() * 14) + 0;
+        console.log(randNumber);
+        var total = result['data'][randNumber]['images']['original'].url;
+         console.log("success", total);
+        $("#giphResult").attr('src', total);
+    }
+  });
+  });  
+}); //end of document.ready
 
 	</script>
 	<body>
@@ -64,5 +82,10 @@
 				</div>
 			</div>
 		</div>
+	<form>
+		<input id="giphButton" type = "submit" value="Get Giph">
+		<img id = "giphResult">
+	</form>
+
 	</body>
 </html>
