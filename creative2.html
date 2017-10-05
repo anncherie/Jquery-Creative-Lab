@@ -12,6 +12,12 @@
 	<script>
 	
 	$(document).ready(function() {
+		$("#searchButton").mouseover(function(){
+			$("#searchButton").css("background-color", "696868");
+		});
+		$("#searchButton").mouseout(function(){
+        		$("#searchButton").css("background-color", "gray");
+    		});
 		$("#searchButton").click(function(e){
 		var access_key = "34d16e42641bad917abf40b0a6ce001e";
 		  var phone_number = "1"+$("#searchNum").val(); //id references dom, .val takes value of box
