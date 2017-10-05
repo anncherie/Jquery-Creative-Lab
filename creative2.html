@@ -7,35 +7,11 @@
 		integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
 		crossorigin="anonymous">
 	  </script>
+	  <!-- <script src="jq.js"></script> -->
 	</head>
 	<script>
 	
 	$(document).ready(function() {
-		/*var value;
-		var access_key = 'YOUR_ACCESS_KEY';
-		var phone_number = '14158586273';
-		
-		var myurl= "http://apilayer.net/api/validate?access_key=34d16e42641bad917abf40b0a6ce001e";
-
-  		myurl += "&number=" + value;
-  		myurl += format;
-  		console.log(myurl); */
-  		/*$.ajax({
-   		url: myurl, 
-    		dataType : "json",
-    		success : function(parsed_json) {
-      			var validity = parsed_json['valid']['location'];
-      			//var temp_string = parsed_json['current_observation']['temperature_string'];
-      			//var current_weather = parsed_json['current_observation']['weather'];
-      			everything = "<ul>";
-     			everything += "<li>Location: "+location;
-     			everything += "<li>Temperature: "+temp_string;
-     			everything += "<li>Weather: "+current_weather;
-      			everything += "</ul>";
-      			$("#creative2").html(everything);
-			}//end of Success
-		})//end of AJAX */
-		
 		$("#searchButton").click(function(e){
 		var access_key = "34d16e42641bad917abf40b0a6ce001e";
 		  var phone_number = "1"+$("#searchNum").val(); //id references dom, .val takes value of box
@@ -43,15 +19,11 @@
   		e.preventDefault();
 		var myurl="http://apilayer.net/api/validate?access_key=" + access_key + "&number=" + phone_number;
 		console.log(myurl);
-		//var access_key = 'YOUR_ACCESS_KEY';
-		//var phone_number = '14158586273';
-		// verify phone number via AJAX call
+
 		$.ajax({
    		url: myurl, 
     	dataType: 'json',
     	success: function(json) {
-
-    // Access and use your preferred validation result objects
     	console.log(json.valid);
     	// /console.log(json.country_code);
 		// console.log(json.carrier);
@@ -64,16 +36,16 @@
 			console.log("didn't work");
 			$("#searchResults").html("This number is not valid!")
 		}
-	}
-});
-	});
+		}	
+		});
+		});
   }); //end of document.ready
 
 	</script>
 	<body>
 		<div class="container">
 			<div class="container2">
-				<p id='enternumberpar'>something about a phone number!</p>
+				<p id='enternumberpar'>Number Validity Check</p>
 				<p id='enterphone'>Enter Phone Number Here:</p>
 				<div class="phonenumberbox">
 					<input id='searchNum' type="text" name="verifier">
