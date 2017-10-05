@@ -47,7 +47,7 @@
 		});
 	$("#giphButton").click(function(e){
  	 e.preventDefault();
- 	 var myurl= "http://api.giphy.com/v1/gifs/search?q=celebration&api_key=epc9UvOUM3cdzaoent78NNtXpvWTsbqv&limit=15";
+ 	 var myurl= "http://api.giphy.com/v1/gifs/search?q=celebration&api_key=epc9UvOUM3cdzaoent78NNtXpvWTsbqv&limit=30";
 	 console.log(myurl);
  	 $.ajax({
    	 url : myurl,
@@ -55,7 +55,7 @@
    	 dataType : "json",
    	 success : function(result) {
      	 console.log(result);
-        var randNumber = Math.floor(Math.random() * 14) + 0;
+        var randNumber = Math.floor(Math.random() * 29) + 0;
         console.log(randNumber);
         var total = result['data'][randNumber]['images']['original'].url;
          console.log("success", total);
