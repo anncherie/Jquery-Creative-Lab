@@ -79,6 +79,7 @@ margin-bottom: 15px;
 #searchResults{
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-size: 25px;
+    margin-bottom: 10px;
 }
 #giphresult{
     height: 150px;
